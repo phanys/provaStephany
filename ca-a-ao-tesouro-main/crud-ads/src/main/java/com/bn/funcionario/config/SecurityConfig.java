@@ -1,7 +1,3 @@
-package com.bn.funcionario;
-
-import com.bn.funcionario.model.FuncionarioModel;
-import com.bn.funcionario.service.FuncionarioServices;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,8 +25,8 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.GET, "/api/**").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/**").permitAll()
-                .requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN", "USER")
-                .requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN", "USER")
+                //.requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN", "USER")
+               // .requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN", "USER")
 
                 .anyRequest().authenticated()
             )

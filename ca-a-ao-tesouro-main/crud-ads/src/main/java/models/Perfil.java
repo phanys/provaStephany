@@ -1,4 +1,4 @@
-package stephany.prova.model;
+package models;
 
 public enum Perfil {
     ADMIN,
